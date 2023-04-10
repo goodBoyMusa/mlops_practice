@@ -11,19 +11,6 @@ jobs:
         - name: checkout code
           uses: actions/checkout@v2
 
-        - name: Set up python 
-          uses: actions/setup-python@v2
-          with:
-            python-version: '3.9'
-
-        - name: Echo message
-          run: echo "workflow triggered"
-    
-        - name: Imstall Dependencies 
-          run: |
-            make install
-
-        - name: Run the code
-          run: |
-            make run
-    
+        - name: docker build
+          run: docker build -t test:ver .
+          
