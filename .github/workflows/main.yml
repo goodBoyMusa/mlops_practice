@@ -22,7 +22,3 @@ jobs:
     
         - name: Push the Docker image
           run: docker push zain1236/basicreqimage:latest
-
-        - name: Run the Docker image
-        run: docker run zain1236/basicreqimage:latest
-    
