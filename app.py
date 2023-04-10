@@ -14,4 +14,3 @@ std_dev = np.std(arr)
 # Print the results to the console
 print("The sum of the numbers is:", total)
 print("The average of the numbers is:", average)
-print("The standard deviation of the numbers is:", std_dev)
