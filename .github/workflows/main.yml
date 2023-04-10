@@ -11,6 +11,15 @@ jobs:
         - name: checkout code
           uses: actions/checkout@v2
 
+        - name: Login to Docker Hub
+          uses: docker/login-action@v1
+          with:
+            username: zain1236
+            password: Allahisone1
+
         - name: Build the Docker image
-          run: docker build . --file Dockerfile --tag basicreqimage:$(date +%s)
+          run: docker build -t zain1236/basicreqimage:latest .
+    
+        - name: Push the Docker image
+          run: docker push zain1236/basicreqimage:latest
       
